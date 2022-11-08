@@ -9,6 +9,7 @@ Curated list of Wikidata Projects
 * [Libraries](#libraries)
 
 ## Models
+- [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page) - Official website of Wikidata
 - [RDF Dump Format](https://www.mediawiki.org/wiki/Wikibase/Indexing/RDF_Dump_Format)
 
 ## Services
@@ -16,7 +17,13 @@ Curated list of Wikidata Projects
 
 ## Tools
 ### Web
+- [Harvest Templates](https://pltools.toolforge.org/harvesttemplates)
+- [Mix-n-match](https://tools.wmflabs.org/mix-n-match/#/)
 - [OpenRefine](https://github.com/OpenRefine/OpenRefine)
+- [Ordia](https://tools.wmflabs.org/ordia/)
+- [Scholia](https://scholia.toolforge.org/)
+- [Wikidata Lexeme Forms](https://lexeme-forms.toolforge.org/)
+
 ### Command-line
 - [wikibase-cli](https://github.com/maxlath/wikibase-cli)
 
