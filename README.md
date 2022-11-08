@@ -12,14 +12,18 @@ Curated list of Wikidata Projects
 * [Libraries](#libraries)
 
 ## Models
-- [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page) - Official website of Wikidata
-- [Wikidata Properties](https://www.wikidata.org/wiki/Help:Properties)
-- [Wikidata Property Constraints](https://www.wikidata.org/wiki/Help:Property_constraints_portal)
-- [Wikidata Lexicographical data](https://www.wikidata.org/wiki/Wikidata:Lexicographical_data)
-- [RDF Dump Format](https://www.mediawiki.org/wiki/Wikibase/Indexing/RDF_Dump_Format)
+- [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page) - Official website of Wikidata.
+- [Wikidata Items](https://www.wikidata.org/wiki/Help:Items) - Describing any information on Wikidata.
+- [Wikidata Statement](https://www.wikidata.org/wiki/Help:Statements) - Use of statements to describe any information on Wikidata.
+- [Wikidata Properties](https://www.wikidata.org/wiki/Help:Properties) - Properties to use for describing any information on Wikidata.
+- [Wikidata Property Constraints](https://www.wikidata.org/wiki/Help:Property_constraints_portal) - Constraints and limits on the properties.
+- [Wikidata Qualifiers](https://www.wikidata.org/wiki/Help:Qualifiers) - Additional context to properties used in statements.
+- [Wikidata Ranking](https://www.wikidata.org/wiki/Help:Ranking) - Ranking for multiple values in statement
+- [Wikidata Lexicographical data](https://www.wikidata.org/wiki/Wikidata:Lexicographical_data) - Representation of lexicographical information of a lanugage.
+- [RDF Dump Format](https://www.mediawiki.org/wiki/Wikibase/Indexing/RDF_Dump_Format) - Format for a RDF Data dump
 
 ## Services
-- [Wikidata SPARQL query service](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service)
+- [Wikidata SPARQL query service](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service) - Service to query and visualize Wikidata entities.
 
 ## Tools
 Tools for accessing and updating Wikidata.
@@ -35,7 +39,7 @@ Web-based tools
 - [Wikidata Lexeme Forms](https://lexeme-forms.toolforge.org/)
 
 ### Command-line
-Command-line based tools
+Command-line based tools.
 - [wikibase-cli](https://github.com/maxlath/wikibase-cli)
 
 ## Libraries
