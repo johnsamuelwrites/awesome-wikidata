@@ -26,6 +26,8 @@ Curated list of Wikidata Projects
 
 ## Services
 - [Wikidata SPARQL query service](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service) - Service to query and visualize Wikidata entities.
+- [Machine learning model for adding instance of and subclass of](https://www.wikidata.org/wiki/User:BrokenSegue/Psychiq) - Huggingface model based on [DistilBERT](https://huggingface.co/docs/transformers/model_doc/distilbert)
+
 
 ## Tools
 Tools for accessing and updating Wikidata.
