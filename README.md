@@ -41,6 +41,10 @@ Web-based tools
 - [QuickStatements](https://tools.wmflabs.org/quickstatements) - Addition and removal of statements on Wikidata
 - [Scholia](https://scholia.toolforge.org/) - Access scholarly information on Wikidata
 - [Wikidata Lexeme Forms](https://lexeme-forms.toolforge.org/) - Add lexicographical information on Wikidata
+- [Propbrowse](https://hay.toolforge.org/propbrowse/) - Browse and view all properties on Wikidata
+- [inteGraality](https://www.wikidata.org/wiki/Wikidata:Tools/inteGraality) - Dashboards for usage of Wikidata Properties
+- [SQID ](https://sqid.toolforge.org/#/) - Browse and query Wikidata
+- [WDProp](https://wdprop.toolforge.org/) - Explore translation information of Wikidata properties
 
 ### Command-line
 Command-line based tools.
