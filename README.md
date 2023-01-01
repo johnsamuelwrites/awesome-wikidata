@@ -43,21 +43,20 @@ Web-based tools
 - [Ordia](https://tools.wmflabs.org/ordia/) - 🖥 📱 Access lexicographical information on Wikidata
 - [QuickStatements](https://tools.wmflabs.org/quickstatements) - 🖥 Addition and removal of statements on Wikidata
 - [Scholia](https://scholia.toolforge.org/) - 🖥 📱 Access scholarly information on Wikidata
-- [Wikidata Lexeme Forms](https://lexeme-forms.toolforge.org/) - 🖥 Add lexicographical information on Wikidata
+- [Wikidata Lexeme Forms](https://lexeme-forms.toolforge.org/) - 🖥 📱 Add lexicographical information on Wikidata
 - [Propbrowse](https://hay.toolforge.org/propbrowse/) - 🖥 Browse and view all properties on Wikidata
 - [inteGraality](https://www.wikidata.org/wiki/Wikidata:Tools/inteGraality) - 🖥 Dashboards for usage of Wikidata Properties
 - [SQID ](https://sqid.toolforge.org/#/) - 🖥 Browse and query Wikidata
-- [WDProp](https://wdprop.toolforge.org/) - 🖥 Explore translation information of Wikidata properties
+- [WDProp](https://wdprop.toolforge.org/) - 🖥 📱 Explore translation information of Wikidata properties
 - [PetScan](https://petscan.wmflabs.org/) - 🖥 Extracting information from templates of Wikimedia projects and possibly add them to Wikidata
 - [Wikidata Image Positions](https://wd-image-positions.toolforge.org/) - 🖥 View the relative position of depicted entities on images or named places on maps. 
 - [Makesense](https://machtsinn.toolforge.org/) - 🖥 Add senses to Lexemes
-- [Massviews Analysis](https://pageviews.wmcloud.org/massviews/) - 🖥 Analysis of views of Wikidata (and other Wikimedia projects)
-- [Wikidata file candidates](https://fist.toolforge.org/file_candidates/#/) - 🖥 Link potential images coming from Wikimedia commons to Wikidata
+- [Massviews Analysis](https://pageviews.wmcloud.org/massviews/) - 🖥 📱 Analysis of views of Wikidata (and other Wikimedia projects)
+- [Wikidata file candidates](https://fist.toolforge.org/file_candidates/#/) - 🖥 📱 Link potential images coming from Wikimedia commons to Wikidata
 - [Free Image Search Tool](https://fist.toolforge.org/fist.php) - 🖥 Add images from Wikidata to Wikimedia projects 
 - [Wikidata Free Image Search Tool](https://fist.toolforge.org/wdfist/) - 🖥 Add images on Wikidata
 - [Cradle](https://cradle.toolforge.org/#/) - 🖥 Create Wikidata items using forms
-- [Wikidata Lexeme Forms](https://lexeme-forms.toolforge.org/)- 🖥 Create lexemes on Wikidata using forms
-- [Structured Search](https://hay.toolforge.org/sdsearch/) - 🖥 Search images of Wikidata items on Wikimedia projects 
+- [Structured Search](https://hay.toolforge.org/sdsearch/) - 🖥 📱 Search images of Wikidata items on Wikimedia projects 
 
 ### Command-line
 Command-line based tools.
