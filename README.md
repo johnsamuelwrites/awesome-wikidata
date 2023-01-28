@@ -29,6 +29,7 @@ Curated list of Wikidata Projects
 - [Machine learning model for adding instance of and subclass of](https://www.wikidata.org/wiki/User:BrokenSegue/Psychiq) - Huggingface model based on [DistilBERT](https://huggingface.co/docs/transformers/model_doc/distilbert)
 - [Wikimedia Quarry](https://quarry.wmflabs.org/) - SQL query interface for Wikidata and Wikimedia projects
 - [Wikidata Mediawiki API](https://www.wikidata.org/w/api.php) - API to access and manipulate Wikidata entities
+- [Wikidata REST API](https://www.wikidata.org/wiki/Wikidata:REST_API) - REST API to access and manipulate Wikidata entities
 
 ## Tools
 Tools for accessing and updating Wikidata.
