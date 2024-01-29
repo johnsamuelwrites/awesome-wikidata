@@ -57,7 +57,8 @@ Web-based tools
 - [Free Image Search Tool](https://fist.toolforge.org/fist.php) - 🖥 Add images from Wikidata to Wikimedia projects 
 - [Wikidata Free Image Search Tool](https://fist.toolforge.org/wdfist/) - 🖥 Add images on Wikidata
 - [Cradle](https://cradle.toolforge.org/#/) - 🖥 Create Wikidata items using forms
-- [Structured Search](https://hay.toolforge.org/sdsearch/) - 🖥 📱 Search images of Wikidata items on Wikimedia projects 
+- [Structured Search](https://hay.toolforge.org/sdsearch/) - 🖥 📱 Search images of Wikidata items on Wikimedia projects
+- [QLever](https://github.com/ad-freiburg/qlever) - 🖥 Very fast SPARQL Engine using Wikidata data dumps
 
 ### Command-line
 Command-line based tools.
