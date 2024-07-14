@@ -60,6 +60,13 @@ Web-based tools
 - [Structured Search](https://hay.toolforge.org/sdsearch/) - 🖥 📱 Search images of Wikidata items on Wikimedia projects
 - [QLever](https://github.com/ad-freiburg/qlever) - 🖥 Very fast SPARQL Engine using Wikidata data dumps
 
+#### Shape Expressions (Entity Schemas)
+- [YASHE (Yet Another ShEx Editor)](http://www.weso.es/YASHE/) -🖥 ShEx editor
+- [Wikidata Shape Expressions Inference](https://wd-shex-infer.toolforge.org/) -🖥automatically infers ShEx schemas from a set of Wikidata items 
+- [EntitySchema Generator](https://tools-static.wmflabs.org/entityschema-generator/) -🖥 Generate Entity Schemas
+- [ShExStatements](https://shexstatements.toolforge.org/) - 🖥 Tool for creating Entity Schemas from CSV files
+- [ESGen](https://huggingface.co/spaces/b289zhan/ESGen)[EntitySchema Generator] - 🖥Generate entity schemas for a class based on its instances
+
 ### Command-line
 Command-line based tools.
 - [wikibase-cli](https://github.com/maxlath/wikibase-cli) - 🖥 Access Wikidata information
