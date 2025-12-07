@@ -59,6 +59,7 @@ Web-based tools
 - [Cradle](https://cradle.toolforge.org/#/) - 🖥 Create Wikidata items using forms
 - [Structured Search](https://hay.toolforge.org/sdsearch/) - 🖥 📱 Search images of Wikidata items on Wikimedia projects
 - [QLever](https://github.com/ad-freiburg/qlever) - 🖥 Very fast SPARQL Engine using Wikidata data dumps
+- [Graphpedia](https://graphpedia.org/) - 🖥 1,600+ visual knowledge graphs based on Wikidata
 
 #### Shape Expressions (Entity Schemas)
 - [YASHE (Yet Another ShEx Editor)](http://www.weso.es/YASHE/) -🖥 ShEx editor
