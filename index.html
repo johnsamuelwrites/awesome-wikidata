@@ -196,7 +196,7 @@ title: Awesome Wikidata
           <img src="assets/logo.svg" alt="Awesome Wikidata logo">
           <h1>Awesome Wikidata</h1>
         </div>
-        <p class="subtitle">Curated list of Wikidata projects and applications across web, desktop, and mobile.</p>
+        <p id="site-subtitle" class="subtitle">Curated list of Wikidata projects and applications across web, desktop, and mobile.</p>
         <nav class="menu" aria-label="Sections">
           <a href="#models">Models</a>
           <a href="#projects-services">Projects & Services</a>
@@ -300,6 +300,25 @@ title: Awesome Wikidata
         var repoUrl = "{{ site.github.repository_url | default: '' }}";
         var defaultBranch = "{{ site.github.default_branch | default: 'main' }}";
         var readmeEditUrl = repoUrl ? repoUrl + "/edit/" + defaultBranch + "/README.md" : "";
+        var subtitle = document.getElementById("site-subtitle");
+        if (subtitle) {
+          var paras = source.querySelectorAll("p");
+          for (var q = 0; q < paras.length; q += 1) {
+            var pText = (paras[q].textContent || "").trim();
+            if (/curated list/i.test(pText)) {
+              subtitle.textContent = pText;
+              break;
+            }
+          }
+        }
+
+        function hasDesktopMarker(raw) {
+          return /desktop|🖥|\uD83D\uDDA5|ðŸ–¥|Ã°Å¸â€“Â¥|ÃƒÂ°Ã…Â¸Ã¢â‚¬â€œÃ‚Â¥/i.test(raw || "");
+        }
+
+        function hasMobileMarker(raw) {
+          return /mobile|📱|\uD83D\uDCF1|ðŸ“±|Ã°Å¸â€œÂ±|ÃƒÂ°Ã…Â¸Ã¢â‚¬Å“Ã‚Â±/i.test(raw || "");
+        }
 
         var modelsHeading = findHeading(source, "h2", "Models");
         var servicesHeading = findHeading(source, "h2", "Services and API");
