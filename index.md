@@ -11,7 +11,6 @@ title: Awesome Wikidata
     --text: #e7f6ff;
     --muted: #9ec5db;
     --accent: #43e0ff;
-    --accent-2: #4cffb2;
   }
 
   body {
@@ -64,101 +63,155 @@ title: Awesome Wikidata
     backdrop-filter: blur(4px);
   }
 
-  h2 {
-    font-size: 1.1rem;
+  .card h2 {
     margin: 0 0 0.65rem;
+    font-size: 1.1rem;
     color: var(--accent);
   }
 
-  ul {
+  .card ul {
     margin: 0;
     padding-left: 1.1rem;
   }
 
-  li + li {
+  .card li + li {
     margin-top: 0.35rem;
   }
 
-  a {
+  .card a {
     color: #b1ecff;
     text-decoration-color: rgba(177, 236, 255, 0.45);
   }
 
-  a:hover {
-    color: white;
-    text-decoration-color: white;
+  .card a:hover {
+    color: #fff;
+    text-decoration-color: #fff;
   }
 
-  .tag {
-    display: inline-block;
-    margin-left: 0.35rem;
-    padding: 0.08rem 0.38rem;
-    font-size: 0.73rem;
-    border-radius: 999px;
-    border: 1px solid rgba(76, 255, 178, 0.45);
-    color: var(--accent-2);
-    vertical-align: middle;
+  #readme-source {
+    display: none;
   }
 </style>
 
 <main class="shell">
   <section class="hero">
     <h1>Awesome Wikidata Apps</h1>
-    <p class="subtitle">A modern, platform-first catalog of tools for desktop, web, and mobile workflows.</p>
+    <p class="subtitle">Generated from README.md. Single source of truth.</p>
   </section>
-
-  <section class="grid">
-    <article class="card">
-      <h2>Web Applications</h2>
-      <ul>
-        <li><a href="https://pltools.toolforge.org/harvesttemplates">Harvest Templates</a> <span class="tag">Desktop</span></li>
-        <li><a href="https://mix-n-match.toolforge.org/#/">Mix-n-match</a> <span class="tag">Desktop</span></li>
-        <li><a href="https://github.com/OpenRefine/OpenRefine">OpenRefine</a> <span class="tag">Desktop</span></li>
-        <li><a href="https://tools.wmflabs.org/ordia/">Ordia</a> <span class="tag">Desktop</span> <span class="tag">Mobile</span></li>
-        <li><a href="https://tools.wmflabs.org/quickstatements">QuickStatements</a> <span class="tag">Desktop</span></li>
-        <li><a href="https://scholia.toolforge.org/">Scholia</a> <span class="tag">Desktop</span> <span class="tag">Mobile</span></li>
-        <li><a href="https://lexeme-forms.toolforge.org/">Wikidata Lexeme Forms</a> <span class="tag">Desktop</span> <span class="tag">Mobile</span></li>
-        <li><a href="https://hay.toolforge.org/propbrowse/">Propbrowse</a> <span class="tag">Desktop</span></li>
-        <li><a href="https://www.wikidata.org/wiki/Wikidata:Tools/inteGraality">inteGraality</a> <span class="tag">Desktop</span></li>
-        <li><a href="https://sqid.toolforge.org/#/">SQID</a> <span class="tag">Desktop</span></li>
-        <li><a href="https://wdprop.toolforge.org/">WDProp</a> <span class="tag">Desktop</span> <span class="tag">Mobile</span></li>
-        <li><a href="https://petscan.wmflabs.org/">PetScan</a> <span class="tag">Desktop</span></li>
-        <li><a href="https://wd-image-positions.toolforge.org/">Wikidata Image Positions</a> <span class="tag">Desktop</span></li>
-        <li><a href="https://machtsinn.toolforge.org/">Makesense</a> <span class="tag">Desktop</span></li>
-        <li><a href="https://pageviews.wmcloud.org/massviews/">Massviews Analysis</a> <span class="tag">Desktop</span> <span class="tag">Mobile</span></li>
-        <li><a href="https://fist.toolforge.org/file_candidates/#/">Wikidata file candidates</a> <span class="tag">Desktop</span> <span class="tag">Mobile</span></li>
-        <li><a href="https://fist.toolforge.org/fist.php">Free Image Search Tool</a> <span class="tag">Desktop</span></li>
-        <li><a href="https://fist.toolforge.org/wdfist/">Wikidata Free Image Search Tool</a> <span class="tag">Desktop</span></li>
-        <li><a href="https://cradle.toolforge.org/#/">Cradle</a> <span class="tag">Desktop</span></li>
-        <li><a href="https://hay.toolforge.org/sdsearch/">Structured Search</a> <span class="tag">Desktop</span> <span class="tag">Mobile</span></li>
-        <li><a href="https://github.com/ad-freiburg/qlever">QLever</a> <span class="tag">Desktop</span></li>
-        <li><a href="https://graphpedia.org/">Graphpedia</a> <span class="tag">Desktop</span></li>
-      </ul>
-    </article>
-
-    <article class="card">
-      <h2>Desktop / CLI Applications</h2>
-      <ul>
-        <li><a href="https://github.com/maxlath/wikibase-cli">wikibase-cli</a></li>
-        <li><a href="https://www.weso.es/YASHE/">YASHE (Yet Another ShEx Editor)</a></li>
-        <li><a href="https://wd-shex-infer.toolforge.org/">Wikidata Shape Expressions Inference</a></li>
-        <li><a href="https://tools-static.wmflabs.org/entityschema-generator/">EntitySchema Generator</a></li>
-        <li><a href="https://shexstatements.toolforge.org/">ShExStatements</a></li>
-        <li><a href="https://huggingface.co/spaces/b289zhan/ESGen">ESGen</a></li>
-      </ul>
-    </article>
-
-    <article class="card">
-      <h2>Mobile-Friendly Apps</h2>
-      <ul>
-        <li><a href="https://tools.wmflabs.org/ordia/">Ordia</a></li>
-        <li><a href="https://scholia.toolforge.org/">Scholia</a></li>
-        <li><a href="https://lexeme-forms.toolforge.org/">Wikidata Lexeme Forms</a></li>
-        <li><a href="https://wdprop.toolforge.org/">WDProp</a></li>
-        <li><a href="https://pageviews.wmcloud.org/massviews/">Massviews Analysis</a></li>
-        <li><a href="https://fist.toolforge.org/file_candidates/#/">Wikidata file candidates</a></li>
-        <li><a href="https://hay.toolforge.org/sdsearch/">Structured Search</a></li>
-      </ul>
-    </article>
-  </section>
+  <section id="app-grid" class="grid"></section>
 </main>
+
+<section id="readme-source">
+  {% capture readme_content %}{% include_relative README.md %}{% endcapture %}
+  {{ readme_content | markdownify }}
+</section>
+
+<script>
+  (function () {
+    function normalize(text) {
+      return (text || "").replace(/\s+/g, " ").trim().toLowerCase();
+    }
+
+    function findHeading(container, tagName, text) {
+      var headings = container.querySelectorAll(tagName);
+      var target = normalize(text);
+      for (var i = 0; i < headings.length; i += 1) {
+        if (normalize(headings[i].textContent) === target) {
+          return headings[i];
+        }
+      }
+      return null;
+    }
+
+    function collectListsBetween(startHeading, endHeading) {
+      var out = [];
+      if (!startHeading) return out;
+      var node = startHeading.nextElementSibling;
+      while (node && node !== endHeading) {
+        if (node.tagName === "UL") out.push(node);
+        node = node.nextElementSibling;
+      }
+      return out;
+    }
+
+    function firstLinkItem(li) {
+      var a = li.querySelector("a");
+      if (!a) return null;
+      return { name: a.textContent.trim(), href: a.href, raw: li.textContent || "" };
+    }
+
+    function hasDesktopMarker(raw) {
+      return /🖥|desktop|ðŸ–¥/i.test(raw);
+    }
+
+    function hasMobileMarker(raw) {
+      return /📱|mobile|ðŸ“±/i.test(raw);
+    }
+
+    function dedupePush(target, item, seen) {
+      if (!item || !item.href || seen[item.href]) return;
+      seen[item.href] = true;
+      target.push(item);
+    }
+
+    function renderCard(root, title, items) {
+      var article = document.createElement("article");
+      article.className = "card";
+      var h2 = document.createElement("h2");
+      h2.textContent = title;
+      article.appendChild(h2);
+
+      var ul = document.createElement("ul");
+      for (var i = 0; i < items.length; i += 1) {
+        var li = document.createElement("li");
+        var a = document.createElement("a");
+        a.href = items[i].href;
+        a.textContent = items[i].name;
+        li.appendChild(a);
+        ul.appendChild(li);
+      }
+      article.appendChild(ul);
+      root.appendChild(article);
+    }
+
+    var source = document.getElementById("readme-source");
+    var grid = document.getElementById("app-grid");
+    if (!source || !grid) return;
+
+    var webHeading = findHeading(source, "h3", "Web");
+    var cliHeading = findHeading(source, "h3", "Command-line");
+    var librariesHeading = findHeading(source, "h2", "Libraries");
+
+    var webLists = collectListsBetween(webHeading, cliHeading);
+    var cliLists = collectListsBetween(cliHeading, librariesHeading);
+
+    var webApps = [];
+    var desktopApps = [];
+    var mobileApps = [];
+    var seenWeb = {};
+    var seenDesktop = {};
+    var seenMobile = {};
+
+    for (var i = 0; i < webLists.length; i += 1) {
+      var lis = webLists[i].querySelectorAll("li");
+      for (var j = 0; j < lis.length; j += 1) {
+        var item = firstLinkItem(lis[j]);
+        dedupePush(webApps, item, seenWeb);
+        if (item && hasDesktopMarker(item.raw)) dedupePush(desktopApps, item, seenDesktop);
+        if (item && hasMobileMarker(item.raw)) dedupePush(mobileApps, item, seenMobile);
+      }
+    }
+
+    for (var k = 0; k < cliLists.length; k += 1) {
+      var cliLis = cliLists[k].querySelectorAll("li");
+      for (var m = 0; m < cliLis.length; m += 1) {
+        var cliItem = firstLinkItem(cliLis[m]);
+        dedupePush(desktopApps, cliItem, seenDesktop);
+      }
+    }
+
+    renderCard(grid, "Web Applications", webApps);
+    renderCard(grid, "Desktop / CLI Applications", desktopApps);
+    renderCard(grid, "Mobile-Friendly Applications", mobileApps);
+  })();
+</script>
