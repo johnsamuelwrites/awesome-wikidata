@@ -1,0 +1,381 @@
+---
+layout: none
+title: Awesome Wikidata
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="Curated list of Wikidata projects and applications across models, services, web, desktop, and mobile.">
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+    <style>
+      :root {
+        --bg-1: #04111f;
+        --bg-2: #081f31;
+        --panel: rgba(10, 28, 46, 0.72);
+        --line: rgba(81, 226, 255, 0.3);
+        --text: #ecf8ff;
+        --muted: #a1cbe3;
+        --accent: #4de6ff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 12% 4%, #134a75 0, transparent 45%),
+          radial-gradient(circle at 92% 22%, #0f4f61 0, transparent 35%),
+          linear-gradient(145deg, var(--bg-1), var(--bg-2) 58%, #071726);
+        font-family: "Space Grotesk", "Segoe UI", sans-serif;
+      }
+
+      .shell {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 1.2rem 1rem 2.8rem;
+      }
+
+      .hero {
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 1rem;
+        background: linear-gradient(170deg, rgba(77, 230, 255, 0.13), rgba(76, 255, 178, 0.05));
+        box-shadow: 0 0 72px rgba(77, 230, 255, 0.1);
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .brand img {
+        width: 54px;
+        height: 54px;
+        border-radius: 12px;
+        border: 1px solid rgba(81, 226, 255, 0.45);
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(1.8rem, 5vw, 3rem);
+        letter-spacing: 0.02em;
+      }
+
+      .subtitle {
+        margin: 0.55rem 0 0;
+        color: var(--muted);
+      }
+
+      .top-actions {
+        margin-top: 0.85rem;
+        display: flex;
+        gap: 0.6rem;
+        flex-wrap: wrap;
+      }
+
+      .pill {
+        display: inline-block;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(77, 230, 255, 0.1);
+        color: #d2f6ff;
+        text-decoration: none;
+        padding: 0.42rem 0.75rem;
+      }
+
+      .pill:hover {
+        color: #fff;
+        border-color: rgba(81, 226, 255, 0.7);
+      }
+
+      .menu {
+        margin-top: 0.95rem;
+        display: flex;
+        gap: 0.55rem;
+        flex-wrap: wrap;
+      }
+
+      .menu a {
+        display: inline-block;
+        border-radius: 999px;
+        border: 1px solid rgba(81, 226, 255, 0.38);
+        background: rgba(77, 230, 255, 0.08);
+        color: #d1f6ff;
+        text-decoration: none;
+        padding: 0.36rem 0.68rem;
+      }
+
+      .menu a:hover {
+        color: #fff;
+        border-color: rgba(81, 226, 255, 0.68);
+      }
+
+      .grid {
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 0.9rem;
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 0.9rem;
+        background: var(--panel);
+        backdrop-filter: blur(5px);
+      }
+
+      .card h2 {
+        margin: 0 0 0.65rem;
+        font-size: 1.08rem;
+        color: var(--accent);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .icon {
+        width: 1.4rem;
+        height: 1.4rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        border: 1px solid rgba(81, 226, 255, 0.5);
+        background: rgba(77, 230, 255, 0.14);
+        font-size: 0.83rem;
+      }
+
+      .card ul {
+        margin: 0;
+        padding-left: 1.1rem;
+      }
+
+      .card li + li {
+        margin-top: 0.34rem;
+      }
+
+      .card a {
+        color: #b8ecff;
+        text-decoration-color: rgba(184, 236, 255, 0.45);
+      }
+
+      .card a:hover {
+        color: #fff;
+        text-decoration-color: #fff;
+      }
+
+      #readme-source {
+        display: none;
+      }
+
+      @media (max-width: 760px) {
+        .brand img {
+          width: 46px;
+          height: 46px;
+        }
+
+        .shell {
+          padding-top: 0.85rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div class="brand">
+          <img src="assets/logo.svg" alt="Awesome Wikidata logo">
+          <h1>Awesome Wikidata</h1>
+        </div>
+        <p class="subtitle">Curated list of Wikidata projects and applications across web, desktop, and mobile.</p>
+        <nav class="menu" aria-label="Sections">
+          <a href="#models">Models</a>
+          <a href="#projects-services">Projects & Services</a>
+          <a href="#web-applications">Web</a>
+          <a href="#desktop-cli-applications">Desktop / CLI</a>
+          <a href="#mobile-friendly-applications">Mobile</a>
+        </nav>
+        <div class="top-actions">
+          <a id="improve-link" class="pill" href="#">Improve this list</a>
+        </div>
+      </section>
+      <section id="app-grid" class="grid"></section>
+    </main>
+
+    <section id="readme-source">
+      {% capture readme_content %}{% include_relative README.md %}{% endcapture %}
+      {{ readme_content | markdownify }}
+    </section>
+
+    <script>
+      (function () {
+        function normalize(text) {
+          return (text || "").replace(/\s+/g, " ").trim().toLowerCase();
+        }
+
+        function slugify(text) {
+          return (text || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+        }
+
+        function findHeading(container, tagName, text) {
+          var headings = container.querySelectorAll(tagName);
+          var target = normalize(text);
+          for (var i = 0; i < headings.length; i += 1) {
+            if (normalize(headings[i].textContent) === target) return headings[i];
+          }
+          return null;
+        }
+
+        function collectListsBetween(startHeading, endHeading) {
+          var out = [];
+          if (!startHeading) return out;
+          var node = startHeading.nextElementSibling;
+          while (node && node !== endHeading) {
+            if (node.tagName === "UL") out.push(node);
+            node = node.nextElementSibling;
+          }
+          return out;
+        }
+
+        function firstLinkItem(li) {
+          var a = li.querySelector("a");
+          if (!a) return null;
+          return { name: a.textContent.trim(), href: a.href, raw: li.textContent || "" };
+        }
+
+        function hasDesktopMarker(raw) {
+          return /desktop|ðŸ–¥|Ã°Å¸â€“Â¥/i.test(raw || "");
+        }
+
+        function hasMobileMarker(raw) {
+          return /mobile|ðŸ“±|Ã°Å¸â€œÂ±/i.test(raw || "");
+        }
+
+        function dedupePush(target, item, seen) {
+          if (!item || !item.href || seen[item.href]) return;
+          seen[item.href] = true;
+          target.push(item);
+        }
+
+        function renderCard(root, id, iconHtml, title, items) {
+          var article = document.createElement("article");
+          article.className = "card";
+          article.id = id || slugify(title);
+
+          var h2 = document.createElement("h2");
+          var iconSpan = document.createElement("span");
+          iconSpan.className = "icon";
+          iconSpan.innerHTML = iconHtml;
+          h2.appendChild(iconSpan);
+          h2.appendChild(document.createTextNode(title));
+          article.appendChild(h2);
+
+          var ul = document.createElement("ul");
+          for (var i = 0; i < items.length; i += 1) {
+            var li = document.createElement("li");
+            var a = document.createElement("a");
+            a.href = items[i].href;
+            a.textContent = items[i].name;
+            li.appendChild(a);
+            ul.appendChild(li);
+          }
+
+          article.appendChild(ul);
+          root.appendChild(article);
+        }
+
+        var source = document.getElementById("readme-source");
+        var grid = document.getElementById("app-grid");
+        if (!source || !grid) return;
+
+        var repoUrl = "{{ site.github.repository_url | default: '' }}";
+        var defaultBranch = "{{ site.github.default_branch | default: 'main' }}";
+        var readmeEditUrl = repoUrl ? repoUrl + "/edit/" + defaultBranch + "/README.md" : "";
+
+        var modelsHeading = findHeading(source, "h2", "Models");
+        var servicesHeading = findHeading(source, "h2", "Services and API");
+        var toolsHeading = findHeading(source, "h2", "Tools");
+        var webHeading = findHeading(source, "h3", "Web");
+        var cliHeading = findHeading(source, "h3", "Command-line");
+        var librariesHeading = findHeading(source, "h2", "Libraries");
+
+        var modelLists = collectListsBetween(modelsHeading, servicesHeading);
+        var projectLists = collectListsBetween(servicesHeading, toolsHeading);
+        var webLists = collectListsBetween(webHeading, cliHeading);
+        var cliLists = collectListsBetween(cliHeading, librariesHeading);
+
+        var models = [];
+        var projects = [];
+        var webApps = [];
+        var desktopApps = [];
+        var mobileApps = [];
+
+        var seenModels = {};
+        var seenProjects = {};
+        var seenWeb = {};
+        var seenDesktop = {};
+        var seenMobile = {};
+
+        function collectFromLists(lists, output, seen) {
+          for (var i = 0; i < lists.length; i += 1) {
+            var lis = lists[i].querySelectorAll("li");
+            for (var j = 0; j < lis.length; j += 1) {
+              dedupePush(output, firstLinkItem(lis[j]), seen);
+            }
+          }
+        }
+
+        collectFromLists(modelLists, models, seenModels);
+        collectFromLists(projectLists, projects, seenProjects);
+
+        for (var w = 0; w < webLists.length; w += 1) {
+          var webLis = webLists[w].querySelectorAll("li");
+          for (var x = 0; x < webLis.length; x += 1) {
+            var webItem = firstLinkItem(webLis[x]);
+            dedupePush(webApps, webItem, seenWeb);
+            if (webItem && hasDesktopMarker(webItem.raw)) dedupePush(desktopApps, webItem, seenDesktop);
+            if (webItem && hasMobileMarker(webItem.raw)) dedupePush(mobileApps, webItem, seenMobile);
+          }
+        }
+
+        for (var c = 0; c < cliLists.length; c += 1) {
+          var cliLis = cliLists[c].querySelectorAll("li");
+          for (var d = 0; d < cliLis.length; d += 1) {
+            dedupePush(desktopApps, firstLinkItem(cliLis[d]), seenDesktop);
+          }
+        }
+
+        renderCard(grid, "models", "&#x1F9E0;", "Models", models);
+        renderCard(grid, "projects-services", "&#x1F680;", "Projects & Services", projects);
+        renderCard(grid, "web-applications", "&#x1F578;", "Web Applications", webApps);
+        renderCard(grid, "desktop-cli-applications", "&#x1F5A5;", "Desktop / CLI Applications", desktopApps);
+        renderCard(grid, "mobile-friendly-applications", "&#x1F4F1;", "Mobile-Friendly Applications", mobileApps);
+
+        var improve = document.getElementById("improve-link");
+        if (improve && readmeEditUrl) improve.href = readmeEditUrl;
+
+        var links = document.querySelectorAll("a");
+        for (var n = 0; n < links.length; n += 1) {
+          var label = normalize(links[n].textContent);
+          var href = links[n].getAttribute("href") || "";
+          var isImproveLabel = label.indexOf("improve this page") !== -1;
+          var pointsToIndex = /\/(blob|edit|tree)\/[^/]+\/index\.(md|html)(?:$|[#?])/i.test(href);
+          if ((isImproveLabel || pointsToIndex) && readmeEditUrl) {
+            links[n].href = readmeEditUrl;
+          } else if (pointsToIndex) {
+            links[n].href = href.replace(/index\.(md|html)/i, "README.md");
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>

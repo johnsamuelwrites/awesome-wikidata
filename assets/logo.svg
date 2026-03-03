@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Awesome Wikidata logo</title>
+  <desc id="desc">Neon styled AW monogram on dark gradient background</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#071425"/>
+      <stop offset="60%" stop-color="#0a2742"/>
+      <stop offset="100%" stop-color="#081b2f"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#59ecff"/>
+      <stop offset="100%" stop-color="#52ffb7"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect x="8" y="8" width="240" height="240" rx="42" fill="url(#bg)"/>
+  <rect x="8" y="8" width="240" height="240" rx="42" fill="none" stroke="#5de8ff" stroke-opacity="0.35" stroke-width="4"/>
+  <g filter="url(#glow)" stroke="url(#line)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M44 180 L74 74 L104 180"/>
+    <path d="M58 132 H90"/>
+    <path d="M124 74 L144 180 L170 112 L196 180 L214 74"/>
+  </g>
+</svg>
