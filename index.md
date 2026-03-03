@@ -50,6 +50,9 @@ title: Awesome Wikidata
 
   .hero-actions {
     margin-top: 0.85rem;
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
   }
 
   .edit-link {
@@ -72,6 +75,29 @@ title: Awesome Wikidata
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 0.9rem;
+  }
+
+  .menu {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+
+  .menu-link {
+    display: inline-block;
+    padding: 0.38rem 0.7rem;
+    border-radius: 999px;
+    border: 1px solid rgba(93, 219, 255, 0.35);
+    color: #cbf4ff;
+    text-decoration: none;
+    background: rgba(67, 224, 255, 0.08);
+  }
+
+  .menu-link:hover {
+    color: #fff;
+    border-color: rgba(93, 219, 255, 0.65);
+    background: rgba(67, 224, 255, 0.14);
   }
 
   .card {
@@ -132,6 +158,11 @@ title: Awesome Wikidata
   <section class="hero">
     <h1>Awesome Wikidata Apps</h1>
     <p class="subtitle">Curated list of Wikidata applications across web, desktop, and mobile.</p>
+    <nav class="menu" aria-label="Platform menu">
+      <a class="menu-link" href="#web-applications">Web</a>
+      <a class="menu-link" href="#desktop-cli-applications">Desktop / CLI</a>
+      <a class="menu-link" href="#mobile-friendly-applications">Mobile</a>
+    </nav>
     <div class="hero-actions">
       <a id="improve-link" class="edit-link" href="#">Improve this list</a>
     </div>
@@ -192,9 +223,17 @@ title: Awesome Wikidata
       target.push(item);
     }
 
+    function slugify(text) {
+      return (text || "")
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "");
+    }
+
     function renderCard(root, iconHtml, title, items) {
       var article = document.createElement("article");
       article.className = "card";
+      article.id = slugify(title);
       var h2 = document.createElement("h2");
       var iconSpan = document.createElement("span");
       iconSpan.className = "icon";
@@ -264,9 +303,25 @@ title: Awesome Wikidata
 
     var links = document.querySelectorAll("a");
     for (var n = 0; n < links.length; n += 1) {
-      if (normalize(links[n].textContent) === "improve this page" && readmeEditUrl) {
+      var label = normalize(links[n].textContent);
+      var href = links[n].getAttribute("href") || "";
+      var isImproveLabel = label.indexOf("improve this page") !== -1;
+      var pointsToIndex = /\/(blob|edit|tree)\/[^/]+\/index\.md(?:$|[#?])/i.test(href);
+      if ((isImproveLabel || pointsToIndex) && readmeEditUrl) {
         links[n].href = readmeEditUrl;
+      } else if (pointsToIndex) {
+        links[n].href = href.replace(/index\.md/i, "README.md");
       }
+    }
+
+    var legacyMap = {
+      "#models": "#web-applications",
+      "#tools": "#desktop-cli-applications",
+      "#libraries": "#mobile-friendly-applications"
+    };
+    for (var p = 0; p < links.length; p += 1) {
+      var current = (links[p].getAttribute("href") || "").toLowerCase();
+      if (legacyMap[current]) links[p].setAttribute("href", legacyMap[current]);
     }
   })();
 </script>
