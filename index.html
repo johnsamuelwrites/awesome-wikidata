@@ -4,11 +4,13 @@ title: Awesome Wikidata
 ---
 <!doctype html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ page.title }}</title>
-    <meta name="description" content="Curated list of Wikidata projects and applications across models, services, web, desktop, and mobile.">
+    <meta name="description"
+      content="Curated list of Wikidata projects and applications across models, services, web, desktop, and mobile.">
     <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
     <style>
       :root {
@@ -130,6 +132,7 @@ title: Awesome Wikidata
         border-radius: 16px;
         padding: 0.9rem;
         background: var(--panel);
+        -webkit-backdrop-filter: blur(5px);
         backdrop-filter: blur(5px);
       }
 
@@ -159,8 +162,19 @@ title: Awesome Wikidata
         padding-left: 1.1rem;
       }
 
-      .card li + li {
+      .card li+li {
         margin-top: 0.34rem;
+      }
+
+      .item-name {
+        display: inline-block;
+      }
+
+      .item-desc {
+        margin-top: 0.15rem;
+        color: var(--muted);
+        font-size: 0.93rem;
+        line-height: 1.35;
       }
 
       .card a {
@@ -189,6 +203,7 @@ title: Awesome Wikidata
       }
     </style>
   </head>
+
   <body>
     <main class="shell">
       <section class="hero">
@@ -196,7 +211,8 @@ title: Awesome Wikidata
           <img src="assets/logo.svg" alt="Awesome Wikidata logo">
           <h1>Awesome Wikidata</h1>
         </div>
-        <p id="site-subtitle" class="subtitle">Curated list of Wikidata projects and applications across web, desktop, and mobile.</p>
+        <p id="site-subtitle" class="subtitle">Curated list of Wikidata projects and applications across web, desktop,
+          and mobile.</p>
         <nav class="menu" aria-label="Sections">
           <a href="#models">Models</a>
           <a href="#projects-services">Projects & Services</a>
@@ -249,7 +265,21 @@ title: Awesome Wikidata
         function firstLinkItem(li) {
           var a = li.querySelector("a");
           if (!a) return null;
-          return { name: a.textContent.trim(), href: a.href, raw: li.textContent || "" };
+          var raw = (li.textContent || "").replace(/\s+/g, " ").trim();
+          var name = a.textContent.trim();
+          var desc = "";
+          var split = raw.indexOf(" - ");
+          if (split >= 0) {
+            desc = raw.slice(split + 3).trim();
+          } else {
+            desc = raw.replace(name, "").trim().replace(/^[\-–—:\s]+/, "");
+          }
+          desc = desc
+            .replace(/🖥|📱/g, "")
+            .replace(/ðŸ–¥|ðŸ“±|Ã°Å¸â€“Â¥|Ã°Å¸â€œÂ±|ÃƒÂ°Ã…Â¸Ã¢â‚¬â€œÃ‚Â¥|ÃƒÂ°Ã…Â¸Ã¢â‚¬Å“Ã‚Â±/g, "")
+            .replace(/\s+/g, " ")
+            .trim();
+          return { name: name, href: a.href, raw: raw, desc: desc };
         }
 
         function hasDesktopMarker(raw) {
@@ -283,9 +313,21 @@ title: Awesome Wikidata
           for (var i = 0; i < items.length; i += 1) {
             var li = document.createElement("li");
             var a = document.createElement("a");
+            a.className = "item-name";
             a.href = items[i].href;
             a.textContent = items[i].name;
             li.appendChild(a);
+            if (items[i].desc) {
+              var desc = document.createElement("div");
+              desc.className = "item-desc";
+              desc.textContent = items[i].desc
+                .replace(/\uD83D\uDDA5|\uD83D\uDCF1/g, "")
+                .replace(/ðŸ–¥|ðŸ“±|Ã°Å¸â€“Â¥|Ã°Å¸â€œÂ±/g, "")
+                .replace(/^available on (pc )?desktop\s*/i, "")
+                .replace(/^available on mobile phones\s*/i, "")
+                .trim();
+              li.appendChild(desc);
+            }
             ul.appendChild(li);
           }
 
@@ -397,4 +439,5 @@ title: Awesome Wikidata
       })();
     </script>
   </body>
+
 </html>
