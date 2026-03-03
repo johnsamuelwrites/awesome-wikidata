@@ -48,6 +48,25 @@ title: Awesome Wikidata
     margin: 0.5rem 0 0;
   }
 
+  .hero-actions {
+    margin-top: 0.85rem;
+  }
+
+  .edit-link {
+    display: inline-block;
+    padding: 0.42rem 0.7rem;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    color: #c9f2ff;
+    text-decoration: none;
+    background: rgba(67, 224, 255, 0.08);
+  }
+
+  .edit-link:hover {
+    color: #fff;
+    border-color: rgba(93, 219, 255, 0.6);
+  }
+
   .grid {
     margin-top: 1.2rem;
     display: grid;
@@ -67,6 +86,22 @@ title: Awesome Wikidata
     margin: 0 0 0.65rem;
     font-size: 1.1rem;
     color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .icon {
+    display: inline-flex;
+    width: 1.35rem;
+    height: 1.35rem;
+    border-radius: 999px;
+    border: 1px solid rgba(93, 219, 255, 0.45);
+    background: rgba(67, 224, 255, 0.12);
+    align-items: center;
+    justify-content: center;
+    font-size: 0.82rem;
+    line-height: 1;
   }
 
   .card ul {
@@ -96,7 +131,10 @@ title: Awesome Wikidata
 <main class="shell">
   <section class="hero">
     <h1>Awesome Wikidata Apps</h1>
-    <p class="subtitle">Generated from README.md. Single source of truth.</p>
+    <p class="subtitle">Curated list of Wikidata applications across web, desktop, and mobile.</p>
+    <div class="hero-actions">
+      <a id="improve-link" class="edit-link" href="#">Improve this list</a>
+    </div>
   </section>
   <section id="app-grid" class="grid"></section>
 </main>
@@ -154,11 +192,15 @@ title: Awesome Wikidata
       target.push(item);
     }
 
-    function renderCard(root, title, items) {
+    function renderCard(root, iconHtml, title, items) {
       var article = document.createElement("article");
       article.className = "card";
       var h2 = document.createElement("h2");
-      h2.textContent = title;
+      var iconSpan = document.createElement("span");
+      iconSpan.className = "icon";
+      iconSpan.innerHTML = iconHtml;
+      h2.appendChild(iconSpan);
+      h2.appendChild(document.createTextNode(title));
       article.appendChild(h2);
 
       var ul = document.createElement("ul");
@@ -177,6 +219,9 @@ title: Awesome Wikidata
     var source = document.getElementById("readme-source");
     var grid = document.getElementById("app-grid");
     if (!source || !grid) return;
+    var repoUrl = "{{ site.github.repository_url | default: '' }}";
+    var defaultBranch = "{{ site.github.default_branch | default: 'main' }}";
+    var readmeEditUrl = repoUrl ? repoUrl + "/edit/" + defaultBranch + "/README.md" : "";
 
     var webHeading = findHeading(source, "h3", "Web");
     var cliHeading = findHeading(source, "h3", "Command-line");
@@ -210,8 +255,18 @@ title: Awesome Wikidata
       }
     }
 
-    renderCard(grid, "Web Applications", webApps);
-    renderCard(grid, "Desktop / CLI Applications", desktopApps);
-    renderCard(grid, "Mobile-Friendly Applications", mobileApps);
+    renderCard(grid, "&#x1F578;", "Web Applications", webApps);
+    renderCard(grid, "&#x1F5A5;", "Desktop / CLI Applications", desktopApps);
+    renderCard(grid, "&#x1F4F1;", "Mobile-Friendly Applications", mobileApps);
+
+    var improve = document.getElementById("improve-link");
+    if (improve && readmeEditUrl) improve.href = readmeEditUrl;
+
+    var links = document.querySelectorAll("a");
+    for (var n = 0; n < links.length; n += 1) {
+      if (normalize(links[n].textContent) === "improve this page" && readmeEditUrl) {
+        links[n].href = readmeEditUrl;
+      }
+    }
   })();
 </script>
