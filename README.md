@@ -62,6 +62,7 @@ Web-based tools
 - [Graphpedia](https://graphpedia.org/) - 🖥 1,600+ visual knowledge graphs based on Wikidata
 - [WikiCards trivia](https://playwikicards.com/trivia-questions/) - 🖥 📱 Daily general knowledge quizzes generated from Wikidata facts (capitals, flags, rivers, works, events), each answer linked to its Wikidata item
 - [Human Lineage](https://humanlineage.org) - 🖥 📱 Genealogical graph of historical people built from Wikidata kinship properties (P22, P25, P26, P40) and WikiTree, with ancestor trees, fan charts and a family graph for each person linked to its QID
+- [vereinsweg.de](https://www.vereinsweg.de/) - 🖥 📱 History of 129 German football clubs (founding, stadiums, coaches, presidents, player stations) built from Wikidata, in German
 
 #### Shape Expressions (Entity Schemas)
 - [YASHE (Yet Another ShEx Editor)](http://www.weso.es/YASHE/) -🖥 ShEx editor
